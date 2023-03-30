@@ -1,4 +1,5 @@
 using System;
+using System.Media;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace CompScoreApp
@@ -10,7 +11,7 @@ namespace CompScoreApp
             InitializeComponent();
         }
 
-        int seconds = 600;
+        int seconds = 10;
         int tickerCount = 1;
         bool timerRunning = false;
         int redScoreTotal = 0;
@@ -51,11 +52,34 @@ namespace CompScoreApp
             secondslabel.Text = seconds.ToString();
 
 
+
+            if (seconds < 30)
+            {
+                this.BackColor = Color.FromArgb(255, 232, 232); // this should be pink-ish
+            }
+
+
+            if (seconds < 10)
+            {
+                this.BackColor = Color.FromArgb(255, 200, 200);
+            }
+
+
+
             if (seconds < 0)
             {
                 timer1.Stop();
+
+                this.BackColor = Color.FromArgb(255, 0, 0);
+
+                SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+                simpleSound.Play();
             }
+
         }
+    
+
+        
 
 
 
