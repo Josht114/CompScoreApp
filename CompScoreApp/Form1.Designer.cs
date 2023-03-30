@@ -38,18 +38,20 @@
             // 
             // timeLabel
             // 
-            timeLabel.AutoSize = true;
-            timeLabel.Location = new Point(347, 61);
+            timeLabel.Font = new Font("Calibri", 120F, FontStyle.Bold, GraphicsUnit.Point);
+            timeLabel.Location = new Point(723, 9);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(40, 20);
+            timeLabel.Size = new Size(808, 234);
             timeLabel.TabIndex = 0;
             timeLabel.Text = "xx:xx";
+            timeLabel.Click += timeLabel_Click;
             // 
             // startStop
             // 
-            startStop.Location = new Point(338, 111);
+            startStop.Font = new Font("Calibri", 72F, FontStyle.Bold, GraphicsUnit.Point);
+            startStop.Location = new Point(633, 261);
             startStop.Name = "startStop";
-            startStop.Size = new Size(94, 29);
+            startStop.Size = new Size(663, 155);
             startStop.TabIndex = 1;
             startStop.Text = "Start / Stop";
             startStop.UseVisualStyleBackColor = true;
@@ -63,7 +65,7 @@
             // ticker
             // 
             ticker.AutoSize = true;
-            ticker.Location = new Point(616, 41);
+            ticker.Location = new Point(1589, 9);
             ticker.Name = "ticker";
             ticker.Size = new Size(17, 20);
             ticker.TabIndex = 2;
@@ -72,18 +74,18 @@
             // secondslabel
             // 
             secondslabel.AutoSize = true;
-            secondslabel.Location = new Point(653, 125);
+            secondslabel.Location = new Point(1589, 52);
             secondslabel.Name = "secondslabel";
-            secondslabel.Size = new Size(50, 20);
+            secondslabel.Size = new Size(17, 20);
             secondslabel.TabIndex = 3;
-            secondslabel.Text = "label1";
+            secondslabel.Text = "0";
             secondslabel.Click += label1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1801, 588);
             Controls.Add(secondslabel);
             Controls.Add(ticker);
             Controls.Add(startStop);

@@ -36,12 +36,12 @@ namespace CompScoreApp
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan time = TimeSpan.FromSeconds(seconds);
-            string text = time.ToString(@"mm\.ss");
+            string text = time.ToString(@"mm\:ss");
 
             timeLabel.Text = text;
-            seconds = seconds -1;
+            seconds = seconds - 1;
 
-  
+
 
             ticker.Text = tickerCount++.ToString();
             secondslabel.Text = seconds.ToString();
@@ -49,11 +49,16 @@ namespace CompScoreApp
 
             if (seconds < 0)
             {
-                 timer1.Stop();
+                timer1.Stop();
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timeLabel_Click(object sender, EventArgs e)
         {
 
         }
