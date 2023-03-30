@@ -1,4 +1,5 @@
 using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CompScoreApp
 {
@@ -9,9 +10,12 @@ namespace CompScoreApp
             InitializeComponent();
         }
 
-        int seconds = 100;
+        int seconds = 600;
         int tickerCount = 1;
         bool timerRunning = false;
+        int redScoreTotal = 0;
+        int blueScoreTotal = 0;
+
 
 
 
@@ -53,13 +57,90 @@ namespace CompScoreApp
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+
+        private void redOnePoint_Click(object sender, EventArgs e)
+        {
+            redScoreTotal++;
+            redScore.Text = redScoreTotal.ToString();
         }
 
-        private void timeLabel_Click(object sender, EventArgs e)
+        private void redTwoPoint_Click(object sender, EventArgs e)
         {
+            redScoreTotal = redScoreTotal + 2;
+            redScore.Text = redScoreTotal.ToString();
+        }
+
+        private void redThreePoint_Click(object sender, EventArgs e)
+        {
+            redScoreTotal = redScoreTotal + 3;
+            redScore.Text = redScoreTotal.ToString();
+        }
+
+        private void redFourPoint_Click(object sender, EventArgs e)
+        {
+            redScoreTotal = redScoreTotal + 4;
+            redScore.Text = redScoreTotal.ToString();
+        }
+
+        private void redFivePoint_Click(object sender, EventArgs e)
+        {
+            redScoreTotal = redScoreTotal + 5;
+            redScore.Text = redScoreTotal.ToString();
+        }
+
+        private void redSixPoint_Click(object sender, EventArgs e)
+        {
+            redScoreTotal = redScoreTotal + 6;
+            redScore.Text = redScoreTotal.ToString();
+        }
+
+        private void blueOnePoint_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal++;
+            blueScore.Text = blueScoreTotal.ToString();
+        }
+
+        private void blueTwoPoint_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal = blueScoreTotal + 2;
+            blueScore.Text = blueScoreTotal.ToString();
+        }
+
+        private void blueThreePoint_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal = blueScoreTotal + 3;
+            blueScore.Text = blueScoreTotal.ToString();
+        }
+
+        private void blueFourPoint_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal = blueScoreTotal + 4;
+            blueScore.Text = blueScoreTotal.ToString();
+        }
+
+        private void blueFivePoint_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal = blueScoreTotal + 5;
+            blueScore.Text = blueScoreTotal.ToString();
+        }
+
+        private void blueSixPoint_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal = blueScoreTotal + 6;
+            blueScore.Text = blueScoreTotal.ToString();
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            timerRunning = false;
+            redScoreTotal = 0;
+            redScore.Text = redScoreTotal.ToString();
+            blueScoreTotal = 0;
+            blueScore.Text = blueScoreTotal.ToString();
+            seconds = 600;
+            timeLabel.Text = "10:00";
 
         }
     }
