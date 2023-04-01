@@ -57,6 +57,8 @@
             resetButton = new Button();
             redNegative = new Button();
             blueNegative = new Button();
+            label7 = new Label();
+            whiteLabel = new Label();
             SuspendLayout();
             // 
             // timeLabel
@@ -340,11 +342,35 @@
             blueNegative.UseVisualStyleBackColor = true;
             blueNegative.Click += blueNegative_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(257, 23);
+            label7.Name = "label7";
+            label7.Size = new Size(95, 35);
+            label7.TabIndex = 27;
+            label7.Text = "Black";
+            // 
+            // whiteLabel
+            // 
+            whiteLabel.AutoSize = true;
+            whiteLabel.BackColor = SystemColors.ActiveCaptionText;
+            whiteLabel.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            whiteLabel.ForeColor = SystemColors.Control;
+            whiteLabel.Location = new Point(1488, 23);
+            whiteLabel.Name = "whiteLabel";
+            whiteLabel.Size = new Size(97, 35);
+            whiteLabel.TabIndex = 29;
+            whiteLabel.Text = "White";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1801, 1055);
+            Controls.Add(whiteLabel);
+            Controls.Add(label7);
             Controls.Add(blueNegative);
             Controls.Add(redNegative);
             Controls.Add(resetButton);
@@ -372,6 +398,7 @@
             Controls.Add(ticker);
             Controls.Add(startStop);
             Controls.Add(timeLabel);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -408,5 +435,7 @@
         private Button resetButton;
         private Button redNegative;
         private Button blueNegative;
+        private Label label7;
+        private Label whiteLabel;
     }
 }
