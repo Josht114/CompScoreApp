@@ -9,9 +9,12 @@ namespace CompScoreApp
         public Form1()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
-        int seconds = 10;
+
+        static int totalSeconds = 420;
+        int seconds = totalSeconds;
         int tickerCount = 1;
         bool timerRunning = false;
         int redScoreTotal = 0;
@@ -52,16 +55,22 @@ namespace CompScoreApp
             secondslabel.Text = seconds.ToString();
 
 
+            if (seconds < 210)
+            {
+                this.BackColor = Color.FromArgb(0, 255, 0); // this should be green
+            }
+
+
 
             if (seconds < 30)
             {
-                this.BackColor = Color.FromArgb(255, 232, 232); // this should be pink-ish
+                this.BackColor = Color.FromArgb(0, 102, 255); // this should be blue
             }
 
 
             if (seconds < 10)
             {
-                this.BackColor = Color.FromArgb(255, 200, 200);
+                this.BackColor = Color.FromArgb(255, 153, 51); // this should be orange
             }
 
 
@@ -70,16 +79,16 @@ namespace CompScoreApp
             {
                 timer1.Stop();
 
-                this.BackColor = Color.FromArgb(255, 0, 0);
+                this.BackColor = Color.FromArgb(255, 0, 0);   // red
 
                 SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
                 simpleSound.Play();
             }
 
         }
-    
 
-        
+
+
 
 
 
@@ -163,9 +172,23 @@ namespace CompScoreApp
             redScore.Text = redScoreTotal.ToString();
             blueScoreTotal = 0;
             blueScore.Text = blueScoreTotal.ToString();
-            seconds = 600;
-            timeLabel.Text = "10:00";
+            seconds = totalSeconds;
+            timeLabel.Text = "7:00";
 
+            this.BackColor = default;
+
+        }
+
+        private void redNegative_Click(object sender, EventArgs e)
+        {
+            redScoreTotal = redScoreTotal - 1;
+            redScore.Text = redScoreTotal.ToString();
+        }
+
+        private void blueNegative_Click(object sender, EventArgs e)
+        {
+            blueScoreTotal = blueScoreTotal -1;
+            blueScore.Text = blueScoreTotal.ToString();
         }
     }
 }

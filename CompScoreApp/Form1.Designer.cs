@@ -55,6 +55,8 @@
             label5 = new Label();
             label6 = new Label();
             resetButton = new Button();
+            redNegative = new Button();
+            blueNegative = new Button();
             SuspendLayout();
             // 
             // timeLabel
@@ -308,7 +310,7 @@
             // resetButton
             // 
             resetButton.Font = new Font("Arial Narrow", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            resetButton.Location = new Point(1280, 228);
+            resetButton.Location = new Point(1234, 40);
             resetButton.Name = "resetButton";
             resetButton.Size = new Size(166, 112);
             resetButton.TabIndex = 24;
@@ -316,11 +318,35 @@
             resetButton.UseVisualStyleBackColor = true;
             resetButton.Click += resetButton_Click;
             // 
+            // redNegative
+            // 
+            redNegative.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            redNegative.Location = new Point(134, 274);
+            redNegative.Name = "redNegative";
+            redNegative.Size = new Size(360, 66);
+            redNegative.TabIndex = 25;
+            redNegative.Text = "Negative";
+            redNegative.UseVisualStyleBackColor = true;
+            redNegative.Click += redNegative_Click;
+            // 
+            // blueNegative
+            // 
+            blueNegative.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            blueNegative.Location = new Point(1320, 256);
+            blueNegative.Name = "blueNegative";
+            blueNegative.Size = new Size(360, 66);
+            blueNegative.TabIndex = 26;
+            blueNegative.Text = "Negative";
+            blueNegative.UseVisualStyleBackColor = true;
+            blueNegative.Click += blueNegative_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1801, 1055);
+            Controls.Add(blueNegative);
+            Controls.Add(redNegative);
             Controls.Add(resetButton);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -380,5 +406,7 @@
         private Label label5;
         private Label label6;
         private Button resetButton;
+        private Button redNegative;
+        private Button blueNegative;
     }
 }
