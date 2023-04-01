@@ -10,10 +10,15 @@ namespace CompScoreApp
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
+            TimeSpan time = TimeSpan.FromSeconds(totalSeconds);
+            string text = time.ToString(@"mm\:ss");
+
+            timeLabel.Text = text;
+            seconds = seconds - 1;
         }
 
 
-        static int totalSeconds = 420;
+        static int totalSeconds = 300;
         int seconds = totalSeconds;
         int tickerCount = 1;
         bool timerRunning = false;
@@ -55,7 +60,7 @@ namespace CompScoreApp
             secondslabel.Text = seconds.ToString();
 
 
-            if (seconds < 210)
+            if (seconds < (totalSeconds / 2))
             {
                 this.BackColor = Color.FromArgb(0, 255, 0); // this should be green
             }
@@ -187,7 +192,7 @@ namespace CompScoreApp
 
         private void blueNegative_Click(object sender, EventArgs e)
         {
-            blueScoreTotal = blueScoreTotal -1;
+            blueScoreTotal = blueScoreTotal - 1;
             blueScore.Text = blueScoreTotal.ToString();
         }
     }

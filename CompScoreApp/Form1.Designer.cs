@@ -66,7 +66,7 @@
             timeLabel.Name = "timeLabel";
             timeLabel.Size = new Size(578, 213);
             timeLabel.TabIndex = 0;
-            timeLabel.Text = "10:00";
+            timeLabel.Text = "00:00";
             timeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // startStop
