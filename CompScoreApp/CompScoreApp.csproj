@@ -6,11 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>axe_icon_250393.ico</ApplicationIcon>
+    <ApplicationIcon>kimono_martial_arts_fight_sport_game_clothes_icon_228600.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="axe_icon_250393.ico" />
+    <Content Include="kimono_martial_arts_fight_sport_game_clothes_icon_228600.ico" />
   </ItemGroup>
 
 </Project>
