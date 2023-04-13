@@ -178,7 +178,11 @@ namespace CompScoreApp
             blueScoreTotal = 0;
             blueScore.Text = blueScoreTotal.ToString();
             seconds = totalSeconds;
-            timeLabel.Text = "7:00";
+
+            TimeSpan time = TimeSpan.FromSeconds(seconds);
+            string text = time.ToString(@"mm\:ss");
+
+            timeLabel.Text = text;
 
             this.BackColor = default;
 
