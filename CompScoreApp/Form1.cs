@@ -180,7 +180,7 @@ namespace CompScoreApp
             seconds = totalSeconds;
 
             TimeSpan time = TimeSpan.FromSeconds(seconds);
-            string text = time.ToString(@"mm\:ss");
+            string text = time.ToString(@"mm\:ss"); // x
 
             timeLabel.Text = text;
 
