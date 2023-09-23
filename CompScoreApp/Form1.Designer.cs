@@ -136,12 +136,12 @@
             // 
             // redTwoPoint
             // 
-            redTwoPoint.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            redTwoPoint.Font = new Font("Arial", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             redTwoPoint.Location = new Point(44, 461);
             redTwoPoint.Name = "redTwoPoint";
             redTwoPoint.Size = new Size(646, 89);
             redTwoPoint.TabIndex = 7;
-            redTwoPoint.Text = "Pass";
+            redTwoPoint.Text = "Pass / Double re-guard";
             redTwoPoint.UseVisualStyleBackColor = true;
             redTwoPoint.Click += redTwoPoint_Click;
             // 
@@ -235,12 +235,12 @@
             // 
             // blueTwoPoint
             // 
-            blueTwoPoint.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            blueTwoPoint.Font = new Font("Arial", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             blueTwoPoint.Location = new Point(1065, 461);
             blueTwoPoint.Name = "blueTwoPoint";
             blueTwoPoint.Size = new Size(646, 89);
             blueTwoPoint.TabIndex = 13;
-            blueTwoPoint.Text = "Pass";
+            blueTwoPoint.Text = "Pass / Double re-guard";
             blueTwoPoint.UseVisualStyleBackColor = true;
             blueTwoPoint.Click += blueTwoPoint_Click;
             // 
